@@ -10,4 +10,5 @@ Usage
  4. Then run the command `node createUserShieldAssociation.js` to associate the user created in step 1 with the shield created in step 2.
  5. Use the `node simulateHazard.js` command to trigger an event.
  
- See IoT4I documentation on Bluemix for more details. https:// console.ng.bluemix.net/docs/services/IotInsurance/index.html
+
+ See [IoT4I documentation on Bluemix] (https:// console.ng.bluemix.net/docs/services/IotInsurance/index.html) for more details. 
