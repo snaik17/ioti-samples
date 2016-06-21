@@ -11,4 +11,4 @@ Usage
  5. Use the `node simulateHazard.js` command to trigger an event.
  
 
- See [IoT4I documentation on Bluemix] (https:// console.ng.bluemix.net/docs/services/IotInsurance/index.html) for more details. 
+ See [IBM IoT for Insurance] (https:// console.ng.bluemix.net/docs/services/IotInsurance/index.html) for more details. 
