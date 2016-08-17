@@ -39,6 +39,11 @@ var readUserShieldAssociation = function(username) {
   });
 };
 
-var username = "demoUser1";
+var args = process.argv;
 
-readUserShieldAssociation(username);
+if (args.length < 3) {
+    console.log("Please specify username");
+} else {
+	console.log("Reading user association " + args[2]);
+	readUserShieldAssociation( args[2]);
+}

@@ -16,7 +16,7 @@ var config = require( "./config.js");
  */
 var readShieldCode = function(shieldUuid) {
   console.info("Using the /shieldcode/byuuid/ REST endpoint to obtain information about a shield code...");
-  var reqUrl = config.api + "/shieldcode/byuuid/" + shieldUuid;
+  var reqUrl = config.api + "/jscode/byuuid/" + shieldUuid;
 
   console.info("Using URL " + reqUrl);
 
@@ -41,4 +41,11 @@ var readShieldCode = function(shieldUuid) {
 
 var shieldUuid = "1";
 
-readShieldCode(shieldUuid);
+var args = process.argv;
+
+if (args.length < 3) {
+    console.log("Please specify shield UUID");
+} else {
+	console.log("Reading shield with UUID " + args[2]);
+	readShieldCode( args[2]);
+}

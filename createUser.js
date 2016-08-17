@@ -47,7 +47,7 @@ var createUser = function(user) {
 };
 
 // Create a sample user. If a user with the same username exists in the database the function will fail.
-var user = { "username": "user1",
+var user = { "username": "<tbd>",
   "fullname": "John Doe",
   "firstname": "John",
   "lastname": "Doe",
@@ -55,9 +55,24 @@ var user = { "username": "user1",
   "accessLevel": 100, // set to 10 for users that have dashboard access
   "address": "42 Wallaby Way, Sydney",
   "email": "user@example.com",
-  "deviceId": "demoDevice1",
+  "deviceId": "<tbd>",
   "deviceType": "wink",
   "type": "wink"
 };
 
-csrfRequests.requestAPIWithCSRF(createUser, user);
+var args = process.argv;
+
+if (args.length < 3) {
+    console.log("Please specify user id");
+} else {
+	var userid = args[2];
+
+	user.username = "user"+userid;
+	user.deviceId = "demoDevice"+userid;
+	
+	console.log("Creating user user" + user.username + " with device " + user.deviceId);
+	
+	csrfRequests.requestAPIWithCSRF(createUser, user);
+}
+
+

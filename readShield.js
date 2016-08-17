@@ -41,4 +41,12 @@ var readShield = function(shieldUuid) {
 
 var shieldUuid = "1";	// the shield with ID 1 is predefined in the database
 
-readShield(shieldUuid);
+var args = process.argv;
+
+if (args.length < 3) {
+    console.log("Please specify shield UUID");
+} else {
+	console.log("Reading shield with UUID " + args[2]);
+	readShield( args[2]);
+}
+
